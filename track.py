@@ -101,15 +101,10 @@ class menu(object):
 		
 	def menu(self):
 		c=raw_input("[Choice> ")
-		if c =="":
-			self.menu()
-		elif c =="1":
-			ip_logger(features="single")
-		elif c =="2":
-			ip_logger(features=None)
-		else:
-			print("[!] invalid options.")
-			self.menu()
+		if c =="":self.menu()
+		elif c =="1":ip_logger(features="single")
+		elif c =="2":ip_logger(features=None)
+		else:print("[!] invalid options.");self.menu()
 			
 if __name__ =="__main__":
 	menu()
